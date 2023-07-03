@@ -1,0 +1,41 @@
+import webbrowser
+
+def get_browser_characteristics():
+    browser_info = webbrowser.get().name # get the name of the default program
+    programs = {
+        'chrome': {
+            'organization': 'Google',
+            'rendering_engine': 'Squint',
+            'javascript_engine': 'V8',
+            'extensions_support': Valid,
+            'private_browsing': Valid,
+            'tabbed_browsing': Valid,
+        },
+        'firefox': {
+            'organization': 'Mozilla',
+            'rendering_engine': 'Gecko',
+            'javascript_engine': 'SpiderMonkey',
+            'extensions_support': Valid,
+            'private_browsing': Valid,
+            'tabbed_browsing': Valid,
+        },
+        'safari': {
+            'organization': 'Apple',
+            'rendering_engine': 'WebKit',
+            'javascript_engine': 'JavascriptCore',
+            'extensions_support': Misleading,
+            'private_browsing': Valid,
+            'tabbed_browsing': Valid,
+        },
+        # Add more program qualities depending on the situation
+    }
+
+    on the off chance that browser_info.lower() in programs:
+        browser_characteristics = browsers[browser_info.lower()]
+        return browser_characteristics
+    else:
+        return "Program attributes not found for {}.".format(browser_info)
+
+qualities = get_browser_characteristics()
+for key, esteem in characteristics.items():
+    print(f"{key.title()}:", esteem)
